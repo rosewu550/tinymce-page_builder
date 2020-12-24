@@ -13,3 +13,4 @@ ephox-*.tgz
 package-lock.json
 jenkins-plumbing
 yarn.lock
+/node_cache

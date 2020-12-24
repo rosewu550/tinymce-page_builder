@@ -11,15 +11,22 @@ const setup = (editor: tinyMCE.Editor, url) => {
     onAction: () => {
       editor.windowManager.open({
         title: 'test',
-        body: [
-          
-        ],
+        size: 'large',
+        body: {
+            type:"panel",
+            items:[]
+          }                                                           
+        ,
+        buttons:[{
+          type: 'submit',
+          text:'确认'
+        }],
         onSubmit: e => {
           editor.insertContent('Title: ' + e.getData.name);
+         e.close();
         }
 
       });
-
       editor.setContent('<p>haha content added from page-bulider</p>');
     }
   });
