@@ -6,6 +6,6 @@ Plugin();
 
 tinymce.init({
   selector: 'textarea.tinymce',
-  plugins: 'code page-bulider',
-  toolbar: 'page-bulider'
+  plugins: 'code fullscreen ',
+  toolbar: 'fullscreen mysidebar'
 });
