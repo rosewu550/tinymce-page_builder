@@ -52,4 +52,6 @@ export default () => {
     
     return Api.get(fullscreenState);
   });
+
+  // tinymce.activeEditor.$()
 };

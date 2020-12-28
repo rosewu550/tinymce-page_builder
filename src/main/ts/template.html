@@ -6,9 +6,41 @@
     <title>Document</title>
 </head>
 <style>
-    /* * {
+    * {
         box-sizing: border-box;
-    } */
+    }
+
+    #template_main {
+        width: 100%;
+        height: 300px;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    #template_main div {
+        border: 3px dotted black;
+    }
+
+    #template_main .left {
+        /* width: 50%; */
+        height: 100%;
+        flex: 1;
+        border-right: none;
+    }
+
+    #template_main .right {
+        /* width: 50%; */
+        height: 100%;
+        flex: 1;
+        border-left: none;
+    }
+
+    .center {
+        flex: 1;
+        height: 100%;
+    }
 
 
    
@@ -18,24 +50,13 @@
 
 <body>
     <div id="template_main">
-        <div>
-            <h1>表格</h1>
-        </div>
-        <div>
-            <h1>表格</h1>
-        </div>
-        <div>
-            <h1>表格</h1>
-        </div>
-        <div>
-            <h1>表格</h1>
-        </div>
-        <div>
-            <h1>表格</h1>
-        </div>
-        <div>
-            <h1>表格</h1>
-        </div>
+       <div class = "left">
+           
+       </div>
+       <div class = "center"></div>
+       <div class = "right">
+
+       </div>
     </div>
 </body>
 

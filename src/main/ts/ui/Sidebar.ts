@@ -1,4 +1,5 @@
 import * as tinyMCE from "tinymce/tinymce";
+import * as threeContainer from './threeContainer';
 import { Css, SugarElement, Attribute, SugarElements } from '@ephox/sugar';
 
 const component_name = '表格';
@@ -11,7 +12,7 @@ const register = (editor: tinyMCE.Editor) => {
 
             const box = SugarElement.fromTag('div');
             var child_box_str = '';
-            var template = `<div draggable = "true" class ="resizable"><h1>${component_name}</h1></div>`;
+            var template = `<div draggable = "true" build-type = "three_container"><h1>${component_name}</h1></div>`;
             for (let i = 0; i < 8; i++) {
                 child_box_str += template
             }
@@ -33,10 +34,13 @@ const register = (editor: tinyMCE.Editor) => {
             editor.execCommand('mceFullScreen');//默认开启全屏
             api.element().appendChild(box.dom);
 
-
+            threeContainer.register();
             return () => {
                 api.element().removeChild(box.dom);
             };
+        },
+        onShow: () => {
+           
         }
     })
 };
