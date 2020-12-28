@@ -1,12 +1,13 @@
 import { Cell } from '@ephox/katamari';
 import * as tinyMCE from 'tinymce/tinymce';
 
-const makeSetupHandler = (editor: tinyMCE.Editor, fullscreenState: Cell<object>) => (api) => {
+const makeSetupHandler = (editor: tinyMCE.Editor, fullscreenState: Cell<object>) => (api: tinyMCE.Ui.Menu.ToggleMenuItemInstanceApi) => {
     api.setActive(fullscreenState.get() !== null);
-    const editorEventCallback = (e) => 
-    api.setActive(e.state);
+    const editorEventCallback = (e) => api.setActive(e.state);
     editor.on('FullscreenStateChanged', editorEventCallback);
-    return () => editor.off('FullscreenStateChanged', editorEventCallback);
+    return () => editor.off('FullscreenStateChanged', (e) => {
+        api.setActive(e.state)
+    });
 };
 
 

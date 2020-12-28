@@ -1,0 +1,33 @@
+#template_main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#template_main>div {
+    flex: 120px;
+    height: 150px;
+    background-color: red;
+    margin: 5px;
+}
+
+#template_main>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#template_main>div h1 {
+    display: block;
+    margin: 0 auto;
+}
+
+#template_main>div h1:hover {
+    cursor: move;
+}
+
+#tinymce:-moz-drag-over {
+    border: 1px solid black;
+  }
+
+ 

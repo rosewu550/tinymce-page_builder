@@ -48,9 +48,8 @@ export default () => {
     Commands.register(editor, fullscreenState);
     Buttons.register(editor, fullscreenState);
     Sidebar.register(editor);
-
     editor.addShortcut('Meta+Shift+F', '', 'mceFullScreen');
-
+    
     return Api.get(fullscreenState);
   });
 };
