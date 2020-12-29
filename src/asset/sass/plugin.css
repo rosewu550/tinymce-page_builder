@@ -1,0 +1,48 @@
+#template_main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  overflow: scroll;
+  overflow-x: hidden;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  padding-right: 5px;
+}
+
+#template_main div {
+  -webkit-box-flex: 40%;
+      -ms-flex: 40%;
+          flex: 40%;
+  margin: 5px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+  min-width: 120px;
+  height: 100px;
+  min-height: 100px;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#template_main div h1 {
+  display: block;
+  margin: 0 auto;
+}
+
+#template_main div h1:hover {
+  cursor: move;
+}
+/*# sourceMappingURL=plugin.css.map */

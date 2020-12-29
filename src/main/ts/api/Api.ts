@@ -1,14 +1,12 @@
 
-
 const get = function (fullscreenState) {
-    return {
-      isFullscreen() {
-        return fullscreenState.get() !== null;
-      }
-    };
+  return {
+    isFullscreen() {
+      return fullscreenState.get() !== null;
+    }
   };
-  
-  export {
-    get
-  };
-  
+};
+
+export {
+  get
+};
