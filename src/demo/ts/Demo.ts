@@ -11,7 +11,8 @@ tinymce.init({
   selector: 'div.tinymce',
   plugins: 'code fullscreen',
   toolbar: 'content_template',
-  content_css: 'three_container.css'
+  content_css: '../../asset/sass/template.css',
+  menubar: false
 });
 
 window.onload = () => {

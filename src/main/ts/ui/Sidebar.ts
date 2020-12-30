@@ -19,9 +19,9 @@ const register = (editor: tinyMCE.Editor) => {
             });
 
             Css.setAll(box, {
-                width: '25vw',
-                background: '#dcdfe6',
-                border: '1px solid #dcdfe6'
+                width: '20vw',
+                'min-width':'200px',
+                background: 'rgba(243, 243, 247,.3)'
             });
 
             editor.execCommand('mceFullScreen'); // 默认开启全屏
