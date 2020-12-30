@@ -11,11 +11,6 @@ const register = () => {
             e.dataTransfer.setData('text/html', Template.oneRowOneColum());
         }, false);
 
-        item.addEventListener('dragenter',(e) => {
-            console.log(e);
-
-        });
-
         item.addEventListener('dragend', (e) => {
             e.currentTarget.style.opacity = '1';
         }, false);
