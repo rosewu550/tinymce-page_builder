@@ -1,8 +1,22 @@
 // import * as tinyMCE from 'tinymce/tinymce';
 import * as Events from '../api/Events';
 import tinymce from 'tinymce/tinymce';
-import { Css, SugarElement, WindowVisualViewport } from '@ephox/sugar';
+import { Css, EventUnbinder, SugarElement, WindowVisualViewport } from '@ephox/sugar';
 import { Fun, Singleton, Cell } from '@ephox/katamari';
+
+export interface ScrollInfo {
+  scrollPos: {
+    x: number;
+    y: number;
+  };
+  containerWidth: string;
+  containerHeight: string;
+  containerTop: string;
+  containerLeft: string;
+  iframeWidth: string;
+  iframeHeight: string;
+  fullscreenChangeHandler: EventUnbinder;
+}
 
 declare const window: any;
 // declare const tinymce: any;

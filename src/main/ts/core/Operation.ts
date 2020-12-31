@@ -1,4 +1,10 @@
+import tinymce from 'tinymce/tinymce';
+import * as tinyMCE from 'tinymce/tinymce';
+import { SugarElement } from '@ephox/sugar';
+
+
 declare const document: any;
+
 
 const locationTooltip = () => {
     const operationArea = document.querySelector("body#tinymce");
@@ -7,15 +13,15 @@ const locationTooltip = () => {
         console.log(e);
 
     }, false);
+};
 
-    // operationArea.forEach((item) => {
-     
-
-    // });
-
-
+const dropComponent = (targetElement, templateElement: SugarElement) => {
+    if (targetElement && templateElement) {  
+        targetElement.after(templateElement);
+    }
 }
 
 export {
+    dropComponent,
     locationTooltip
 }

@@ -7,7 +7,7 @@ const register = () => {
     threeContainerDoms.forEach((item) => {
         item.addEventListener('dragstart', (e) => {
             e.currentTarget.style.opacity = '0.4';
-            e.dataTransfer.effectAllowed = 'move';
+            e.dataTransfer.effectAllowed = 'copy';
             e.dataTransfer.setData('text/html', Template.oneRowOneColum());
         }, false);
 
