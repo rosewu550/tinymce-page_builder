@@ -1,0 +1,41 @@
+* {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+article {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+}
+
+article > div {
+  -webkit-box-flex: 200px;
+      -ms-flex: 200px;
+          flex: 200px;
+  height: 200px;
+  margin: 10px;
+  border: 5px dashed #d1d1d1;
+}
+
+article > div:hover {
+  cursor: pointer;
+}
+
+article > i {
+  -webkit-box-flex: 200px;
+      -ms-flex: 200px;
+          flex: 200px;
+  margin: 15px;
+}
+/*# sourceMappingURL=templateAdmin.css.map */
