@@ -26,10 +26,74 @@ article > div {
   height: 200px;
   margin: 10px;
   border: 5px dashed #d1d1d1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+article > div > img {
+  height: 85%;
+  width: 100%;
+  -webkit-transition: all .5s ease 0s;
+  transition: all .5s ease 0s;
+}
+
+article > div > span.bottom {
+  -webkit-transition: all .5s ease 0s;
+  transition: all .5s ease 0s;
+  position: absolute;
+  display: block;
+  height: 20%;
+  background-color: none;
+  bottom: -5px;
+}
+
+article > div > span.bottom span {
+  display: none;
+  -webkit-transition: all .5s ease 0s;
+  transition: all .5s ease 0s;
+}
+
+article > div > span {
+  -webkit-transition: all .5s ease 0s;
+  transition: all .5s ease 0s;
+  display: block;
+  height: 20%;
+  width: calc(100% + 10px);
+  text-align: center;
+  text-overflow: ellipsis;
+  background-color: none;
 }
 
 article > div:hover {
   cursor: pointer;
+}
+
+article > div:hover > img {
+  height: 110%;
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+}
+
+article > div:hover > span:not(.bottom) {
+  -webkit-transform: translateY(-21px);
+          transform: translateY(-21px);
+  color: white;
+}
+
+article > div:hover > span.bottom {
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 article > i {
